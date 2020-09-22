@@ -1,0 +1,70 @@
+/* addPerson.scss */
+.add_person {
+    display: flex;
+
+    .left {
+        flex: 2;
+
+        img {
+            border: 1px solid #666;
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .middle {
+        flex: 5;
+
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, .85);
+        }
+
+        // 分组title左边的小方框
+        .color_box {
+            background-color: #409eff;
+            width: 8px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .des {
+            font-size: 14px;
+            color: #a1a1a1;
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+
+    .right {
+        flex: 3;
+
+        .right_content {
+            height: 500px;
+
+            .right_content_top {
+
+                height: 150px;
+
+            }
+
+            .right_content_bottom {
+                .el-steps {
+                    margin-left: 40%;
+                }
+
+                height: 300px;
+            }
+        }
+
+        /deep/ .icongongzuoxinxi {
+            font-size: 20px;
+        }
+
+
+    }
+
+    //文档
+}

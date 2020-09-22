@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#app,
+.swiper-wrapper,
+.wrap_login,
+.swiper_slide,
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap_login {
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+  }
+
+  .bac1 {
+
+    background-image: linear-gradient(#fe9c31, #fe583c);
+  }
+
+  .bac2 {
+
+    background-image: linear-gradient(#3e87ed, #20a3f6);
+  }
+
+  .bac3 {
+
+    background-image: linear-gradient(#06bcc3, #07bebe);
+  }
+
+  .bac4 {
+
+    background-image: linear-gradient(#8555fd, #8929f5);
+  }
+
+  .bac5 {
+
+    background: #07bdc1;
+  }
+
+  .bottom_p {
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+  }
+
+}
+
+.avue_login_wrap {
+  background: #fff;
+  border-radius: 5px;
+  padding: 28px 32px 10px 10px;
+  position: fixed;
+  top: 25%;
+  right: 15%;
+  z-index: 999;
+
+  .avue-login__submit {
+    position: relative;
+    left: -40px;
+    width: 350px;
+  }
+}
+
+//登录主页
+.width_all {
+  width: 100%;
+  height: 100%;
+}
+
+.login_index_wrap {
+  .el_progress_wrap {
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+  }
+
+  /deep/ .el-progress-bar__outer {
+    height: 3px !important;
+    border-radius: 100px;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    top: -8px;
+    vertical-align: middle;
+  }
+
+  /deep/ .el-icon-circle-close {
+    display: none;
+  }
+
+  .el-progress-bar {
+    padding-right: 0;
+    width: 100%;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  .el-progress.is-exception .el-progress-bar__inner {
+    background-color: #20c997;
+  }
+
+
+}
