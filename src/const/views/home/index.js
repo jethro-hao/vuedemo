@@ -57,39 +57,39 @@ const wordcloudConfig = {
 };
 
 const cardOption = {
-    span: 6,
+    span: 24,
     data: [
 
-        {
-            click: function (item) {
-                this.$message.success(JSON.stringify(item));
-            },
-            name: '阿里',
-            src: 'https://s1.ax1x.com/2020/09/11/wtz2dS.jpg',
-            text: '我对钱不感兴趣',
-            href: '/home',
-            target: '_blank'
-        },
-        {
-            click: function (item) {
-                this.$message.success(JSON.stringify(item));
-            },
-            name: '腾讯',
-            src: 'https://s1.ax1x.com/2020/09/11/wt7DB9.jpg',
-            text: '腾讯游戏,没钱玩你麻痹',
-            href: '/home',
-            target: '_blank'
-        },
-        {
-            click: function (item) {
-                this.$message.success(JSON.stringify(item));
-            },
-            name: '网易掌门人',
-            src: 'https://s1.ax1x.com/2020/09/11/wtHF3T.jpg',
-            text: '网易游戏,玩你麻痹',
-            href: '/home',
-            target: '_blank'
-        },
+        // {
+        //     click: function (item) {
+        //         this.$message.success(JSON.stringify(item));
+        //     },
+        //     name: '阿里',
+        //     src: 'https://s1.ax1x.com/2020/09/11/wtz2dS.jpg',
+        //     text: '我对钱不感兴趣',
+        //     href: '/home',
+        //     target: '_blank'
+        // },
+        // {
+        //     click: function (item) {
+        //         this.$message.success(JSON.stringify(item));
+        //     },
+        //     name: '腾讯',
+        //     src: 'https://s1.ax1x.com/2020/09/11/wt7DB9.jpg',
+        //     text: '腾讯游戏,没钱玩你麻痹',
+        //     href: '/home',
+        //     target: '_blank'
+        // },
+        // {
+        //     click: function (item) {
+        //         this.$message.success(JSON.stringify(item));
+        //     },
+        //     name: '网易掌门人',
+        //     src: 'https://s1.ax1x.com/2020/09/11/wtHF3T.jpg',
+        //     text: '网易游戏,玩你麻痹',
+        //     href: '/home',
+        //     target: '_blank'
+        // },
         {
             click: function (item) {
                 this.$message.success(JSON.stringify(item));

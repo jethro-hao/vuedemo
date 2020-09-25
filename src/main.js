@@ -45,14 +45,22 @@ import Avue from '@smallwei/avue';
 import '@smallwei/avue/lib/index.css';
 Vue.use(Avue);
 //如果使用字典需要赋值axios为全局
-import axios from 'axios';
-window.axios = axios
+// import axios from 'axios';
+// window.axios = axios
 
 //echarts
 import Echarts from 'echarts'
 Vue.prototype.$Echarts = Echarts
 Vue.use(Echarts)
 
+//axios
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
+//mock
+// process.env.Mock && require('./mock/mock.js')
+import mock from "@/mock/mock";
 
 
 
@@ -61,5 +69,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  mock,
   render: h => h(App)
 }).$mount('#app')

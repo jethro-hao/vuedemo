@@ -55,6 +55,14 @@ const routes = [{
           title: 'demo2'
         }
       },
+      {
+        path: '/mock',
+        name: 'mock',
+        component: () => import('@/views/miniFunction/mock/index.vue'),
+        meta: {
+          title: 'mock'
+        }
+      },
       /* 传值 */
       {
         path: '/father',

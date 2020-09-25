@@ -43,18 +43,23 @@ const treeOption = {
 }
 
 const tableOption = {
+    selection: true,
+    searchMenuSpan: 8,
+    viewBtn: true,
     column: [{
             label: '姓名',
-            prop: 'name'
+            prop: 'name',
+            search: true,
         },
         {
             label: '性别',
-            prop: 'sex'
+            prop: 'sex',
+            search: true,
         }
     ]
 }
 
-const tableData = [{
+const tableData0 = [{
         name: '张三',
         sex: '男',
     },
@@ -63,10 +68,20 @@ const tableData = [{
         sex: '女'
     }
 ]
+const tableData1 = [{
+        name: '老王',
+        sex: '男',
+    },
+    {
+        name: '二狗',
+        sex: '女'
+    }
+]
 
 export {
     treeData,
     treeOption,
     tableOption,
-    tableData
+    tableData0,
+    tableData1
 }

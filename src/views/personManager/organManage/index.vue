@@ -10,10 +10,15 @@
           default-expand-all
           :expand-on-click-node="false"
           :render-content="renderContent"
+          @node-click="currentNode"
         ></el-tree>
       </el-aside>
       <el-main>
-        <avue-crud :data="tableData" :option="tableOption" v-model="obj"></avue-crud>
+        <avue-crud
+          :data="tableData"
+          :option="tableOption"
+          v-model="tableObj"
+        ></avue-crud>
       </el-main>
     </el-container>
   </div>
@@ -24,7 +29,8 @@ import {
   treeData,
   treeOption,
   tableOption,
-  tableData,
+  tableData0,
+  tableData1,
 } from "@/const/views/personManager/organManage/index";
 export default {
   name: "organManage",
@@ -33,7 +39,7 @@ export default {
       treeData,
       treeOption,
       tableOption,
-      tableData,
+      tableData: [],
       tableObj: {},
       defaultProps: {
         children: "children",
@@ -63,9 +69,34 @@ export default {
           <span>
             <span>{node.label}</span>
           </span>
-          <span>{{ data }}</span>
+          <span>
+            <el-button
+              style="font-size: 12px;"
+              type="text"
+              on-click={() => this.append(data)}
+            >
+              Append
+            </el-button>
+            <el-button
+              style="font-size: 12px;"
+              type="text"
+              on-click={() => this.remove(node, data)}
+            >
+              Delete
+            </el-button>
+          </span>
         </span>
       );
+    },
+
+    currentNode(node) {
+      console.log(node.value);
+      if (node.value === "1") {
+        this.tableData = tableData0;
+      }
+      if (node.value === "2") {
+        this.tableData = tableData1;
+      }
     },
   },
   computed: {},

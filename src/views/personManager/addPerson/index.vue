@@ -17,7 +17,12 @@
       </el-upload>
     </div>
     <div class="middle">
-      <avue-form ref="form" :option="groupFormOption" v-model="form" @submit="handleSubmit">
+      <avue-form
+        ref="form"
+        :option="groupFormOption"
+        v-model="form"
+        @submit="handleSubmit"
+      >
         <template slot="baseInfoHeader">
           <span class="color_box"></span>
           <span class="title">基本信息</span>
@@ -43,7 +48,10 @@
         <div class="right_content_bottom">
           <el-steps :active="active" direction="vertical">
             <el-step title="基本信息" icon="iconfont iconjibenxinxi"></el-step>
-            <el-step title="工作信息" icon="iconfont icongongzuoxinxi"></el-step>
+            <el-step
+              title="工作信息"
+              icon="iconfont icongongzuoxinxi"
+            ></el-step>
             <el-step title="授权信息" icon="iconfont iconquanxian"></el-step>
           </el-steps>
         </div>
@@ -84,18 +92,19 @@ export default {
       }
       return isJPG && isLt2M;
     },
+    //表单的提交
     handleSubmit(form, done) {
-      console.log(form);
       this.$message.success(JSON.stringify(this.form));
       done();
     },
   },
-  created() {
-    this.option1 = Object.assign(this.deepClone(this.option), {
-      card: true,
-    });
-  },
+  // created() {
+  //   this.option1 =c(this.deepClone(this.option), {
+  //     card: true,
+  //   });
+  // },
   computed: {
+    //百分比
     percentage() {
       let n = 0;
       let m = Math.floor(100 / 3);
@@ -113,6 +122,7 @@ export default {
       }
       return n;
     },
+    //步骤条
     active() {
       let active = 0;
       if (this.form.name) {
