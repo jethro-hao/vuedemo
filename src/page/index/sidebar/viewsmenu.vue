@@ -17,7 +17,7 @@
         <el-menu-item index="/demo">demo</el-menu-item>
         <el-menu-item index="/demo2">demo2</el-menu-item>
         <el-menu-item index="/qrcode">二维码</el-menu-item>
-        <el-menu-item index="/mock">MOCK</el-menu-item>
+        <el-menu-item index="/randomData">随机数据mock</el-menu-item>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">

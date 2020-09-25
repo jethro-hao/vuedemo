@@ -56,11 +56,11 @@ const routes = [{
         }
       },
       {
-        path: '/mock',
-        name: 'mock',
-        component: () => import('@/views/miniFunction/mock/index.vue'),
+        path: '/randomData',
+        name: 'randomData',
+        component: () => import('@/views/miniFunction/randomData/index.vue'),
         meta: {
-          title: 'mock'
+          title: 'randomData'
         }
       },
       /* 传值 */

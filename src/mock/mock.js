@@ -12,6 +12,9 @@
              author_name: Random.cname(), // Random.cname() 随机生成一个常见的中文姓名
              date: Random.date() + ' ' + Random.time(), // Random.date()指示生成的日期字符串的格式,默认为yyyy-MM-dd；Random.time() 返回一个随机的时间字符串
              email: Random.email(),
+             character: Random.character(),
+             float: Random.float(),
+             color: Random.color(),
          }
          articles.push(newArticleObject)
      }
@@ -19,5 +22,47 @@
          data: articles
      }
  }
+
+ //mock 生成随机数据
+ const randomData = function () {
+     let articles = []
+     for (let i = 0; i < 10; i++) {
+         let newArticleObject = {
+             float: Random.float(),
+             color: Random.color(),
+         }
+         articles.push(newArticleObject)
+     }
+     return {
+         data: articles
+     }
+ }
+
+ //mock 静态数据
+ const customData = Mock.mock({
+     "foo": "Hello",
+     "nested": {
+         "a": {
+             "b": {
+                 "c": "Mock.js"
+             }
+         }
+     },
+     "relativePath": {
+         "a": {
+             "b": {
+                 "c": "@../../../foo @../../../nested/a/b/c"
+             }
+         }
+     }
+ })
+
  // 拦截ajax请求，配置mock的数据
  Mock.mock('/api/test', 'get', produceNewsData)
+ Mock.mock('/api/randomData', 'get', randomData)
+ Mock.mock('/api/customData', 'get', customData)
+
+ //Ajax请求的响应时间
+ Mock.setup({
+     timeout: '200-400'
+ })
