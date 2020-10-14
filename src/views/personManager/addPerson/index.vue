@@ -1,12 +1,13 @@
 <template>
   <div class="wrap add_person">
     <div class="left">
+      <camera></camera>
       <div class="imgwrap">
         <img src alt />
       </div>
       <el-upload
         class="avatar-uploader"
-        action
+        action="https://jsonplaceholder.typicode.com/posts/"
         :show-file-list="false"
         :on-success="handleAvatarSuccess"
         :before-upload="beforeAvatarUpload"
@@ -61,8 +62,12 @@
 </template>
 <script>
 import { groupFormOption } from "@/const/views/personManager/addPerson/index.js";
+import camera from "./camera";
 export default {
   name: "addPerson",
+  components: {
+    camera,
+  },
   data() {
     return {
       msg: "aaa",

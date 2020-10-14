@@ -105,6 +105,14 @@ const routes = [{
           title: 'organManage'
         }
       },
+      {
+        path: '/camera',
+        name: 'camera',
+        component: () => import('@/views/personManager/addPerson/ca.vue'),
+        meta: {
+          title: 'camera'
+        }
+      },
     ]
   },
 ]

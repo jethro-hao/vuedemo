@@ -35,6 +35,7 @@
         </template>
         <el-menu-item index="/addPerson">添加人员</el-menu-item>
         <el-menu-item index="/organManage">机构管理</el-menu-item>
+        <el-menu-item index="/camera">拍照</el-menu-item>
       </el-submenu>
     </el-menu>
   </div>
