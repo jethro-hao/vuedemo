@@ -8,7 +8,8 @@
 // import camera from "./camera2.vue";
 // import camera from "./camera3.vue";
 // import camera from "./camera4.vue";
-import camera from "@/components/photograph/camera.vue";
+// import camera from "@/components/photograph/camera.vue";
+import camera from "@/components/a/photograph/camera.vue";
 export default {
   components: {
     camera,
