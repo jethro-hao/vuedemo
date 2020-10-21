@@ -63,6 +63,14 @@ const routes = [{
           title: 'randomData'
         }
       },
+      {
+        path: '/remoteSearch',
+        name: 'remoteSearch',
+        component: () => import('@/views/miniFunction/remoteSearch/remoteSearch.vue'),
+        meta: {
+          title: 'remoteSearch'
+        }
+      },
       /* 传值 */
       {
         path: '/father',
