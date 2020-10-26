@@ -1,21 +1,8 @@
 <template>
   <div class="wrap add_person">
     <div class="left">
+      <img id="finalImg" src="/img/user.png" alt="" />
       <camera></camera>
-      <div class="imgwrap">
-        <img src alt />
-      </div>
-      <el-upload
-        class="avatar-uploader"
-        action="https://jsonplaceholder.typicode.com/posts/"
-        :show-file-list="false"
-        :on-success="handleAvatarSuccess"
-        :before-upload="beforeAvatarUpload"
-      >
-        <!-- <img v-if="imageUrl" :src="imageUrl" class="avatar" />
-        <i v-else class="el-icon-plus avatar-uploader-icon"></i>-->
-        <el-button size="small" type="primary">添加头像</el-button>
-      </el-upload>
     </div>
     <div class="middle">
       <avue-form
@@ -62,7 +49,7 @@
 </template>
 <script>
 import { groupFormOption } from "@/const/views/personManager/addPerson/index.js";
-import camera from "./camera";
+import camera from "@/components/takephoto/camera";
 export default {
   name: "addPerson",
   components: {
