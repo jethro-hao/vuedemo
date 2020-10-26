@@ -1,7 +1,7 @@
 <template>
   <div class="wrap add_person">
     <div class="left">
-      <img id="finalImg" src="/img/user.png" alt="" />
+      <img id="finalImg" :src="imgUrl" :alt="imgUrl" />
       <camera></camera>
     </div>
     <div class="middle">
@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       msg: "aaa",
-      imageUrl: "",
+      imgUrl: "/img/user.png",
       form: {
         name: "",
         organ: "",
@@ -69,21 +69,6 @@ export default {
     };
   },
   methods: {
-    handleAvatarSuccess(res, file) {
-      this.imageUrl = URL.createObjectURL(file.raw);
-    },
-    beforeAvatarUpload(file) {
-      const isJPG = file.type === "image/jpeg";
-      const isLt2M = file.size / 1024 / 1024 < 2;
-
-      if (!isJPG) {
-        this.$message.error("上传头像图片只能是 JPG 格式!");
-      }
-      if (!isLt2M) {
-        this.$message.error("上传头像图片大小不能超过 2MB!");
-      }
-      return isJPG && isLt2M;
-    },
     //表单的提交
     handleSubmit(form, done) {
       this.$message.success(JSON.stringify(this.form));
