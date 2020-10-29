@@ -25,7 +25,7 @@ const groupFormOption = {
                 prop: 'jobNo',
             }, {
                 label: '英文名',
-                prop: 'englishName',
+                prop: 'enName',
             }, {
                 label: '性别',
                 prop: 'sex',
