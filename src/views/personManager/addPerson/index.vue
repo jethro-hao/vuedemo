@@ -49,7 +49,8 @@
 </template>
 <script>
 import { groupFormOption } from "@/const/views/personManager/addPerson/index.js";
-import camera from "@/components/takephoto/camera";
+import camera from "@/components/takephoto/camera"; //抓拍,上传头像
+import PinYin from "@/utils/pinyin/vue-py"; //中文转拼音,首字母大写
 export default {
   name: "addPerson",
   components: {
@@ -63,10 +64,22 @@ export default {
         name: "",
         organ: "",
         authorizationOrgan: "",
+        pinyin: "",
       },
-
       groupFormOption,
     };
+  },
+  watch: {
+    "form.name": {
+      handler(newVal) {
+        //handler(newVal,oldVal)
+        if (newVal) {
+          this.form.pinyin = PinYin.chineseToPinYin(newVal);
+        } else {
+          this.form.pinyin = "";
+        }
+      },
+    },
   },
   methods: {
     //表单的提交

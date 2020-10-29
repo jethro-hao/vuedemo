@@ -15,14 +15,17 @@ const groupFormOption = {
                 }]
             },
             {
+                label: "拼音",
+                prop: "pinyin",
+                placeholder: "自动生成",
+                disabled: "disabled"
+            },
+            {
                 label: '人员工号',
                 prop: 'jobNo',
             }, {
                 label: '英文名',
                 prop: 'englishName',
-            }, {
-                label: '拼音',
-                prop: 'pinyin',
             }, {
                 label: '性别',
                 prop: 'sex',
