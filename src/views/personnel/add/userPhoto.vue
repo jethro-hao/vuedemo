@@ -1,3 +1,10 @@
+<!--
+ * @Author: Jethro
+ * @Date: 2020-11-12 09:05:56
+ * @LastEditors: Jethro
+ * @LastEditTime: 2020-11-12 09:07:29
+ * @FilePath: \vuedemo\src\views\personManager\addPerson\userPhoto.vue
+-->
 <template>
   <div class="wrap">
     <img
@@ -82,8 +89,8 @@
 <script>
 import $ from "jquery";
 import "cropper";
-import "./cropper.min.css";
-import "./ImgCropping.css";
+import "@/components/takephoto/cropper.min.css";
+import "@/components/takephoto/ImgCropping.css";
 export default {
   name: "camera",
   data() {

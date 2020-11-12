@@ -34,7 +34,7 @@ const routes = [{
       {
         path: '/qrcode',
         name: 'Qrcode',
-        component: () => import('@/views/miniFunction/QrCode/index.vue'),
+        component: () => import('@/views/miniFn/QrCode/index.vue'),
         meta: {
           title: '二维码'
         }
@@ -42,23 +42,15 @@ const routes = [{
       {
         path: '/demo',
         name: 'demo',
-        component: () => import('@/views/miniFunction/demo/index.vue'),
+        component: () => import('@/views/miniFn/demo/index.vue'),
         meta: {
           title: 'demo'
         }
       },
       {
-        path: '/demo2',
-        name: 'demo2',
-        component: () => import('@/views/miniFunction/demo/demo2.vue'),
-        meta: {
-          title: 'demo2'
-        }
-      },
-      {
         path: '/randomData',
         name: 'randomData',
-        component: () => import('@/views/miniFunction/randomData/index.vue'),
+        component: () => import('@/views/miniFn/randomData/index.vue'),
         meta: {
           title: 'randomData'
         }
@@ -66,12 +58,12 @@ const routes = [{
       {
         path: '/remoteSearch',
         name: 'remoteSearch',
-        component: () => import('@/views/miniFunction/remoteSearch/remoteSearch.vue'),
+        component: () => import('@/views/miniFn/remoteSearch/remoteSearch.vue'),
         meta: {
           title: 'remoteSearch'
         }
       },
-      /* 传值 */
+      /* 组件传值 */
       {
         path: '/father',
         name: 'father',
@@ -80,45 +72,21 @@ const routes = [{
           title: 'father'
         }
       },
-      {
-        path: '/brother1',
-        name: 'brother1',
-        component: () => import('@/views/byValue/brother1.vue'),
-        meta: {
-          title: 'brother1'
-        }
-      },
-      {
-        path: '/brother2',
-        name: 'brother2',
-        component: () => import('@/views/byValue/brother2.vue'),
-        meta: {
-          title: 'brother2'
-        }
-      },
       /* 人员管理 */
       {
-        path: '/addPerson',
-        name: 'addPerson',
-        component: () => import('@/views/personManager/addPerson/index.vue'),
+        path: '/personnel/add',
+        name: 'add',
+        component: () => import('@/views/personnel/add/index.vue'),
         meta: {
-          title: 'addPerson'
+          title: 'add'
         }
       },
       {
-        path: '/organManage',
-        name: 'organManage',
-        component: () => import('@/views/personManager/organManage/index.vue'),
+        path: '/organization',
+        name: 'organization',
+        component: () => import('@/views/personnel/organization'),
         meta: {
-          title: 'organManage'
-        }
-      },
-      {
-        path: '/camera',
-        name: 'camera',
-        component: () => import('@/views/personManager/addPerson/ca.vue'),
-        meta: {
-          title: 'camera'
+          title: 'organization'
         }
       },
     ]

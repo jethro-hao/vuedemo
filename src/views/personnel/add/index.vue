@@ -1,7 +1,7 @@
 <template>
   <div class="wrap add_person">
     <div class="left">
-      <img id="finalImg" :src="imgUrl" :alt="imgUrl" />
+      <!-- <img id="finalImg" :src="imgUrl" :alt="imgUrl" /> -->
       <camera></camera>
     </div>
     <div class="middle">
