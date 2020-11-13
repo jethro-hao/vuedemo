@@ -2,7 +2,7 @@
  * @Author: Jethro
  * @Date: 2020-09-09 10:54:52
  * @LastEditors: Jethro
- * @LastEditTime: 2020-11-13 14:59:45
+ * @LastEditTime: 2020-11-13 15:11:28
  * @FilePath: \vuedemo\src\views\byValue\father.vue
 -->
 <template>
@@ -14,33 +14,33 @@
         >父组件调用子组件的方法(看控制台)</el-button
       >
     </p>
-    <div class="brother1">
-      <Brother1 ref="child" :fmsg="msg"></Brother1>
+    <div class="child1">
+      <child1 ref="child" :fmsg="msg"></child1>
     </div>
-    <div class="brother2">
-      <Brother2 @ffn="handleFfn"></Brother2>
+    <div class="child2">
+      <child2 @fn="fn"></child2>
     </div>
   </div>
 </template>
 <script>
-import Brother1 from "./brother1";
-import Brother2 from "./brother2";
+import child1 from "./child1";
+import child2 from "./child2";
 export default {
   name: "father",
   components: {
-    Brother1,
-    Brother2,
+    child1,
+    child2,
   },
   data() {
     return {
-      msg: "I am father.(The value is father to brother1.)",
+      msg: "I am father.(The value is father to child1.)",
       str: "",
       des: "",
     };
   },
   methods: {
     // 接收子组件传过来的值
-    handleFfn(val, des) {
+    fn(val, des) {
       this.str = val;
       this.des = des;
     },
@@ -69,12 +69,12 @@ p {
   border: 5px solid blue;
   text-align: center;
 }
-.brother1 {
+.child1 {
   border: 5px solid #e6a23c;
   margin: 20px 10px;
   padding: 5px;
 }
-.brother2 {
+.child2 {
   border: 5px solid pink;
   margin: 20px 10px;
   padding: 5px;
