@@ -63,6 +63,22 @@ const routes = [{
           title: 'remoteSearch'
         }
       },
+      {
+        path: '/colorSelect',
+        name: '颜色选择器',
+        component: () => import('@/views/miniFn/colorSelect/index.vue'),
+        meta: {
+          title: 'colorSelect'
+        }
+      },
+      {
+        path: '/formDesign',
+        name: '表单设计',
+        component: () => import('@/views/miniFn/formDesign/index.vue'),
+        meta: {
+          title: 'formDesign'
+        }
+      },
       /* 组件传值 */
       {
         path: '/father',

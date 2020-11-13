@@ -2,7 +2,7 @@
  * @Author: Jethro
  * @Date: 2020-09-08 10:38:22
  * @LastEditors: Jethro
- * @LastEditTime: 2020-11-12 10:38:54
+ * @LastEditTime: 2020-11-12 17:00:41
  * @FilePath: \vuedemo\src\page\index\top\top.vue
 -->
 <template>
@@ -52,13 +52,30 @@ export default {
           this.$message.info("操作已取消");
         });
     },
-    // 全屏
-    fullScreen() {},
+    // 全屏切换
+    fullScreen() {
+      //全屏
+      if (document.documentElement.requestFullScreen) {
+        document.documentElement.requestFullScreen();
+      } else if (document.documentElement.webkitRequestFullScreen) {
+        document.documentElement.webkitRequestFullScreen();
+      } else if (document.documentElement.mozRequestFullScreen) {
+        document.documentElement.mozRequestFullScreen();
+      }
+      //退出全屏
+      if (document.documentElement.requestFullScreen) {
+        document.exitFullScreen();
+      } else if (document.documentElement.webkitRequestFullScreen) {
+        document.webkitCancelFullScreen();
+      } else if (document.documentElement.mozRequestFullScreen) {
+        document.mozCancelFullScreen();
+      }
+    },
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 .el-header {
   background: #000;
   height: 60px;
@@ -91,6 +108,7 @@ export default {
     // }
   }
   .right {
+    text-align: right;
     height: 100%;
     width: 200px;
     float: right;

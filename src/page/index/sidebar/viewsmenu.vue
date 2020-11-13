@@ -2,7 +2,7 @@
  * @Author: Jethro
  * @Date: 2020-09-01 11:28:59
  * @LastEditors: Jethro
- * @LastEditTime: 2020-11-12 09:31:59
+ * @LastEditTime: 2020-11-12 17:13:24
  * @FilePath: \vuedemo\src\page\index\sidebar\viewsmenu.vue
 -->
 <template>
@@ -26,6 +26,8 @@
         <el-menu-item index="/randomData">随机数据mock</el-menu-item>
         <el-menu-item index="/remoteSearch">远程搜索</el-menu-item>
         <el-menu-item index="/fullscreen">全屏显示</el-menu-item>
+        <el-menu-item index="/colorSelect">颜色选择器</el-menu-item>
+        <el-menu-item index="/formDesign">表单设计</el-menu-item>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">

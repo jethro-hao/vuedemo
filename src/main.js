@@ -1,3 +1,10 @@
+/*
+ * @Author: Jethro
+ * @Date: 2020-08-31 10:59:00
+ * @LastEditors: Jethro
+ * @LastEditTime: 2020-11-12 17:17:30
+ * @FilePath: \vuedemo\src\main.js
+ */
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -61,6 +68,12 @@ Vue.use(VueAxios, axios)
 //mock
 // process.env.Mock && require('./mock/mock.js')
 import mock from "@/mock/mock";
+
+
+
+import AvueFormDesign from 'avue-form-design'
+
+Vue.use(AvueFormDesign)
 
 
 
